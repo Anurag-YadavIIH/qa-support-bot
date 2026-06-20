@@ -15,4 +15,7 @@ lxml==5.2.2
 # ADDED — OpenAI client
 openai==1.35.0
 
+# ADDED — Flask test UI (test_ui.py), not required by the API itself
+flask==3.0.3
+
 # REMOVED — ollama==0.2.1  (no longer needed)
