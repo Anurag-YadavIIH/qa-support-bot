@@ -1,0 +1,35 @@
+# .dockerignore
+# Files to exclude from the Docker build context.
+# Like .gitignore but for Docker — keeps your image small and clean.
+
+# Virtual environment — never copy this into the container
+# Docker installs its own deps via requirements.txt
+venv/
+.venv/
+env/
+
+# ChromaDB data — this is mounted as a volume instead
+chroma_db/
+
+# Python cache files — not needed in container
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Git files — not needed in container
+.git/
+.gitignore
+
+# Environment file — injected via docker-compose env_file
+.env
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+
+# Test and docs
+tests/
+*.md

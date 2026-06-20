@@ -1,0 +1,21 @@
+# requirements.txt
+
+fastapi==0.111.0
+uvicorn==0.30.1
+requests==2.32.3
+beautifulsoup4==4.12.3
+langchain==0.2.6
+langchain-community==0.2.6
+langchain-chroma==0.1.2
+chromadb==0.5.3
+sentence-transformers==3.0.1
+python-dotenv==1.0.1
+lxml==5.2.2
+
+# ADDED — OpenAI client
+openai==1.35.0
+
+# ADDED — Flask test UI (test_ui.py), not required by the API itself
+flask==3.0.3
+
+# REMOVED — ollama==0.2.1  (no longer needed)
