@@ -1,0 +1,20 @@
+# docker-compose.yml (simplified — no Ollama service)
+
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: qa-support-bot
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./chroma_db:/app/chroma_db
+      - ./data:/app/data
+    restart: unless-stopped
+
+# No ollama service, no ollama_data volume, no botnet network needed
